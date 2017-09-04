@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 
 /**
@@ -32,7 +33,18 @@ public class Team implements Serializable {
 	
 	private String city;
 	
+	@OneToOne(cascade=CascadeType.ALL) 
+	@JoinColumn(name="teamId")
+	private Coach coach;
 	
+	public Coach getCoach() {
+		return coach;
+	}
+
+	public void setCoach(Coach coach) {
+		this.coach = coach;
+	}
+
 	@OneToMany(cascade=CascadeType.ALL) @JoinColumn(name="teamId")
 	private Set<Player> players;
 	
@@ -40,10 +52,11 @@ public class Team implements Serializable {
 		super();
 	}
 	
-	public Team(String name, String city, Set<Player> players){
+	public Team(String name, String city, Set<Player> players, Coach coach){
 		this.city = city;
 		this.name = name;
 		this.players = players;
+		this.coach = coach;
 	}
 
 	public String getName() {

@@ -12,7 +12,7 @@ import com.ict.model.Player;
 
 public interface PlayerDao extends CrudRepository<Player, Long> {
 	
-	Player findByName();
+	Player findByName(String name);
 }
 
 

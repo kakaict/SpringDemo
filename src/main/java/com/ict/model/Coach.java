@@ -2,6 +2,7 @@ package com.ict.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -10,7 +11,7 @@ import javax.persistence.Id;
  *
  *@author khaitq on 5 sept. 2017
  */
-
+@Entity
 public class Coach implements Serializable{
 
 	/**
@@ -20,6 +21,12 @@ public class Coach implements Serializable{
 	
 	@Id @GeneratedValue
 	private Long id;
+	
+	private String name;
+	
+	public Coach(String name){
+		setName(name);
+	}
 	
 	public Long getId() {
 		return id;
@@ -37,7 +44,7 @@ public class Coach implements Serializable{
 		this.name = name;
 	}
 
-	private String name;
+	
 
 }
 
