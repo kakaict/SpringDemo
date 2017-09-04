@@ -24,6 +24,9 @@ public class Coach implements Serializable{
 	
 	private String name;
 	
+	public Coach(){
+		
+	}
 	public Coach(String name){
 		setName(name);
 	}
