@@ -48,7 +48,7 @@ public class DemoApplication extends SpringBootServletInitializer{
 			
 			players.add(new Player("A" , "Goal keeper"));
 			players.add( new Player("B" , "Attacker"));
-			Coach c = new Coach("c1");
+			Coach c = new Coach("Mr EGH");
 			Team team = new Team("PSG", "Paris", players, c);
 			teamDao.save(team);
 			
@@ -57,8 +57,8 @@ public class DemoApplication extends SpringBootServletInitializer{
 			players2.add(new Player("A" , "Goal keeper"));
 			players2.add( new Player("B" , "Attacker"));
 			
-			Coach c2 = new Coach("c2");
-			Team team2 = new Team("LONDON", "London", players2, c2);
+			Coach c2 = new Coach("Mr ABCD");
+			Team team2 = new Team("CHELSEA", "London", players2, c2);
 			teamDao.save(team2);
 	}
 	
