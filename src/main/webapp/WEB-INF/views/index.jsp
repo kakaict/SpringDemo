@@ -3,13 +3,26 @@
 <html>
 	<body>
 		<p>
-			hello ${name} , from index
+			hello ${name}
 		</p>
-		
 			<c:forEach var="team" items="${teams}">
-				<li>${team.name}</li>
+				<ul>
+					<li>
+					name : ${team.name}<br>
+					city : ${team.city}<br>
+					coach : ${team.coach.name}<br>
+					players: 
+					<c:forEach var="player" items="${team.players}">
+						<ul>
+							<li>
+								name : ${player.name}<br>
+							</li>
+						</ul>
+					</c:forEach>
+					
+					</li>
+				</ul>
 			</c:forEach>
-			
 	</body>
 
 </html>

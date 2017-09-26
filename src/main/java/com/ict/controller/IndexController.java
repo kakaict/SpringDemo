@@ -25,7 +25,7 @@ public class IndexController {
 	private TeamService teamService;
 
 	@RequestMapping("/hi/{name}")
-	public String getIndex(Map model, @PathVariable String name) {
+	public String getIndex(Map<String, Object> model, @PathVariable String name) {
 		
 		model.put("name", name);
 
