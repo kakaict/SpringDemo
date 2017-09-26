@@ -27,6 +27,10 @@ public class TeamService {
 	public Team findByName(String name){
 		return teamDao.findByName(name);
 	}
+	
+	public Team save(Team team) {
+		return teamDao.save(team);
+	}
 }
 
 

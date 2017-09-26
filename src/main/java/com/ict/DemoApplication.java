@@ -21,6 +21,7 @@ import com.ict.dao.TeamDao;
 import com.ict.model.Coach;
 import com.ict.model.Player;
 import com.ict.model.Team;
+import com.ict.service.TeamService;
 
 @SpringBootApplication
 @ComponentScan
@@ -39,7 +40,7 @@ public class DemoApplication extends SpringBootServletInitializer{
 	}
 	
 	@Autowired
-	private TeamDao teamDao; 
+	private TeamService teamService;
 	
 	@PostConstruct
 	public void init(){
@@ -50,7 +51,7 @@ public class DemoApplication extends SpringBootServletInitializer{
 			players.add( new Player("B" , "Attacker"));
 			Coach c = new Coach("Mr EGH");
 			Team team = new Team("PSG", "Paris", players, c);
-			teamDao.save(team);
+			teamService.save(team);
 			
 			
 			Set<Player> players2 = new HashSet<Player>();
@@ -59,7 +60,7 @@ public class DemoApplication extends SpringBootServletInitializer{
 			
 			Coach c2 = new Coach("Mr ABCD");
 			Team team2 = new Team("CHELSEA", "London", players2, c2);
-			teamDao.save(team2);
+			teamService.save(team2);
 	}
 	
 
