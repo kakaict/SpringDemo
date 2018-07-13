@@ -12,12 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.fasterxml.jackson.core.sym.Name;
-import com.ict.dao.TeamDao;
 import com.ict.model.Coach;
 import com.ict.model.Player;
 import com.ict.model.Team;
